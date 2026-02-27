@@ -4,7 +4,7 @@
 
 set(OWL_VERSION_MAJOR 1)
 set(OWL_VERSION_MINOR 2)
-set(OWL_VERSION_PATCH 3)
+set(OWL_VERSION_PATCH 4)
 
 cmake_minimum_required(VERSION 3.24)
 
@@ -153,7 +153,7 @@ install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/cmake
     ${OWL_CMAKE_INSTALL_DESTINATION}
   FILES_MATCHING
     PATTERN *.cmake
-    PATTERN Findowl.cmake EXCLUDE
+    PATTERN FindTBB.cmake EXCLUDE
 )
 
 set(OWL_INSTALL_TARGETS owl owl_static)
