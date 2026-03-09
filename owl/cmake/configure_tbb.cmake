@@ -14,7 +14,7 @@ else()
  else()
    # on by default, because even if not installed it's trivial
    # to apt/yum install
-  OPTION(OWL_USE_TBB "Use TBB to parallelize host-side code?" ON)
+  OPTION(OWL_USE_TBB "Use TBB to parallelize host-side code?" OFF)
   endif()
 endif()
 
