@@ -65,7 +65,7 @@ debug, and maintain.
     OWLGroup buildBlasAndIas(mat3x4f             &instXfm,
 	                         std::vector<float3> &vtx,
 	                         std::vector<int3>   &idx,
-							 float3               color)
+	                         float3               color)
 	{
 	   /* upload the buffers */
 	   OWLBuffer vtxBuffer
@@ -78,9 +78,10 @@ debug, and maintain.
 	   /* create triangle mesh geometry */
 	   OWLGeom mesh = owlGeomCreate(ctx,myMeshGT);
 	   owlTrianglesSetVertices(mesh,vtxBuffer,vtx.size(),
-	                          /*stride+ofs*/sizeof(vtx[0],0);
-	   owlTrianglesSetIndices(mesh,vtxBuffer,vtx.size(),
+	                           /*stride+ofs*/sizeof(vtx[0]),0);
+	   owlTrianglesSetIndices(mesh,idxBuffer,idx.size(),
 	                          /*stride+ofs*/sizeof(idx[0]),0);
+	   owlGeomSet3f(mesh,"color",color);
 
 	   /* create and build triangle BLAS */
 	   OWLGroup blas = owlTrianglesGroupCreate(ctx,1,&mesh);
@@ -90,9 +91,9 @@ debug, and maintain.
 	   OWLGroup ias = owlInstanceGroupCreate(ctx,1,
 	       /* instantiated BLASes */&blas,
 	       /* instance IDs:       */nullptr,
-		   /* instance transforms */&instXfm);
+	       /* instance transforms */&instXfm);
 	   owlGroupBuildAccel(ias);
-	   return blas; // that's it!
+	   return ias; // that's it!
 	}
 
 Of course, even with OWL there's still much more that needs to be done
