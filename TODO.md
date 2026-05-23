@@ -1,0 +1,7 @@
+- [ ] Normalize README.md whitespace (remove hard tabs and trailing spaces)
+- [ ] Fix heading structure (single H1 and consistent heading style)
+- [ ] Fix list formatting (indentation consistency and blank lines around lists)
+- [ ] Fix code blocks (blank lines around fences, add languages where needed, and style consistency)
+- [ ] Convert bare URLs to markdown links
+- [ ] Remove excessive consecutive blank lines
+- [ ] Re-scan README.md for remaining markdownlint issues and finalize
