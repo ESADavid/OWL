@@ -17,5 +17,5 @@ target_link_libraries(sample09-motionBlurSimpleTriangles
     owl::owl
     stb_image
 )
-add_test(sample09-motionBlurSimpleTriangles
+owl_add_gpu_test(sample09-motionBlurSimpleTriangles
   ${CMAKE_BINARY_DIR}/sample09-motionBlurSimpleTriangles)

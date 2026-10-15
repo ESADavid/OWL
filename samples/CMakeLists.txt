@@ -4,6 +4,13 @@
 # ------------------------------------------------------------------
 # cmdline-only samples, also used for 'make test'
 # ------------------------------------------------------------------
+function(owl_add_gpu_test test_name)
+	add_test(${test_name} ${ARGN})
+	set_tests_properties(${test_name} PROPERTIES
+		SKIP_REGULAR_EXPRESSION "CUDA driver version is insufficient for CUDA runtime version|no CUDA capable devices found"
+	)
+endfunction()
+
 add_subdirectory(cmdline)
 
 # "owl prime" samples

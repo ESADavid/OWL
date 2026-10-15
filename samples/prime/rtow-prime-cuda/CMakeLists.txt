@@ -12,5 +12,5 @@ target_link_libraries(opWeekendCuda
   stb_image
   )
   
-add_test(opWeekendCuda ${CMAKE_BINARY_DIR}/opWeekendCuda)
+owl_add_gpu_test(opWeekendCuda ${CMAKE_BINARY_DIR}/opWeekendCuda)
 

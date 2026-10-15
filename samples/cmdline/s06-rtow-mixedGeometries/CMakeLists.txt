@@ -17,5 +17,5 @@ target_link_libraries(sample06-rtow-mixedGeometries
     owl::owl
     stb_image
 )
-add_test(sample06-rtow-mixedGeometries
+owl_add_gpu_test(sample06-rtow-mixedGeometries
   ${CMAKE_BINARY_DIR}/sample06-rtow-mixedGeometries)

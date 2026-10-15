@@ -17,4 +17,4 @@ target_link_libraries(sample00-rayGenOnly
     owl::owl
     stb_image
 )
-add_test(sample00-rayGenOnly ${CMAKE_BINARY_DIR}/sample00-rayGenOnly)
+owl_add_gpu_test(sample00-rayGenOnly ${CMAKE_BINARY_DIR}/sample00-rayGenOnly)

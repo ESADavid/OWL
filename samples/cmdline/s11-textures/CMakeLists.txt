@@ -17,4 +17,4 @@ target_link_libraries(sample11-textures
     owl::owl
     stb_image
 )
-add_test(sample11-textures ${CMAKE_BINARY_DIR}/sample11-textures)
+owl_add_gpu_test(sample11-textures ${CMAKE_BINARY_DIR}/sample11-textures)

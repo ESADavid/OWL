@@ -23,5 +23,5 @@ target_link_libraries(sample10-launch3D
   stb_image
   )
 
-add_test(sample10-launch3D
+owl_add_gpu_test(sample10-launch3D
   ${CMAKE_BINARY_DIR}/sample10-launch3D)

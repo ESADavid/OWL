@@ -10,7 +10,7 @@ target_link_libraries(opWeekendHost
   owl::owl_prime
   )
 
-add_test(opWeekendHost ${CMAKE_BINARY_DIR}/opWeekendHost)
+owl_add_gpu_test(opWeekendHost ${CMAKE_BINARY_DIR}/opWeekendHost)
 
 
 

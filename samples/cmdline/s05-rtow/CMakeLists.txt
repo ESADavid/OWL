@@ -17,5 +17,5 @@ target_link_libraries(sample05-rtow
     owl::owl
     stb_image
 )
-add_test(sample05-rtow
+owl_add_gpu_test(sample05-rtow
   ${CMAKE_BINARY_DIR}/sample05-rtow)

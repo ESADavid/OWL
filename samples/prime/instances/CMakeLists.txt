@@ -10,5 +10,5 @@ target_link_libraries(opSampleInstances
   stb_image
   )
   
-add_test(opSampleInstances ${CMAKE_BINARY_DIR}/opSampleInstances)
+owl_add_gpu_test(opSampleInstances ${CMAKE_BINARY_DIR}/opSampleInstances)
 

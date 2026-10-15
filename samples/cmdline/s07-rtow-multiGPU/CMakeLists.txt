@@ -17,4 +17,4 @@ target_link_libraries(sample07-rtow-multiGPU
     owl::owl
     stb_image
 )
-add_test(sample07-rtow-multiGPU ${CMAKE_BINARY_DIR}/sample07-rtow-multiGPU)
+owl_add_gpu_test(sample07-rtow-multiGPU ${CMAKE_BINARY_DIR}/sample07-rtow-multiGPU)

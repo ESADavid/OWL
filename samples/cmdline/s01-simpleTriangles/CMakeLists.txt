@@ -17,4 +17,4 @@ target_link_libraries(sample01-simpleTriangles
     owl::owl
     stb_image
 )
-add_test(sample01-simpleTriangles ${CMAKE_BINARY_DIR}/sample01-simpleTriangles)
+owl_add_gpu_test(sample01-simpleTriangles ${CMAKE_BINARY_DIR}/sample01-simpleTriangles)

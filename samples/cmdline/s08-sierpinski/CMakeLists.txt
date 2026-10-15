@@ -17,4 +17,4 @@ target_link_libraries(sample08-sierpinski
     owl::owl
     stb_image
 )
-add_test(sample08-sierpinski ${CMAKE_BINARY_DIR}/sample08-sierpinski)
+owl_add_gpu_test(sample08-sierpinski ${CMAKE_BINARY_DIR}/sample08-sierpinski)
