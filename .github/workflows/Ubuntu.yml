@@ -66,7 +66,7 @@ jobs:
         run: |
           mkdir ${{github.workspace}}/build
           cd ${{github.workspace}}/build
-          cmake .. -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/install-DCMAKE_BUILD_TYPE=${{matrix.config}}
+          cmake .. -DCMAKE_INSTALL_PREFIX=${{github.workspace}}/install -DCMAKE_BUILD_TYPE=${{matrix.config}}
 
       - name: cmake build
         run: |
@@ -76,4 +76,4 @@ jobs:
       - name: cmake install
         run: |
           cd ${{github.workspace}}/build
-          cmake --install .  --config ${{ matrix.config }}
+          cmake --install . --config ${{ matrix.config }}
