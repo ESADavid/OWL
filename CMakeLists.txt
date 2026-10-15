@@ -105,13 +105,13 @@ if (OWL_IS_SUBPROJECT)
   return()
 endif()
 
-if (OWL_BUILD_SAMPLES)
-  add_subdirectory(samples)
-endif()
-
 include(CTest)
 if (BUILD_TESTING)
   enable_testing()
+endif()
+
+if (OWL_BUILD_SAMPLES)
+  add_subdirectory(samples)
 endif()
 
 
