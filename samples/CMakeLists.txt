@@ -5,9 +5,13 @@
 # cmdline-only samples, also used for 'make test'
 # ------------------------------------------------------------------
 function(owl_add_gpu_test test_name)
-	add_test(${test_name} ${ARGN})
+	add_test(NAME ${test_name}
+		COMMAND ${CMAKE_COMMAND}
+			"-DOWL_GPU_TEST_EXECUTABLE=${ARGN}"
+			-P "${CMAKE_CURRENT_FUNCTION_LIST_DIR}/run_gpu_test.cmake"
+	)
 	set_tests_properties(${test_name} PROPERTIES
-		SKIP_REGULAR_EXPRESSION "CUDA driver version is insufficient for CUDA runtime version|no CUDA capable devices found"
+		SKIP_REGULAR_EXPRESSION "Skipping GPU test: CUDA driver version is insufficient|Skipping GPU test: no CUDA capable devices"
 	)
 endfunction()
 
